@@ -3,10 +3,15 @@
 
 // put function declarations here:
 
+#include "ros_comms.h"
+
 void setup()
 {
   Serial.begin(115200); // ESP32 Serial Monitor
   initSensors();        // Initialize sensors
+  if (!RosComms::begin()) {
+    Serial.println("Communication startup failed; motors remain stopped.");
+  } // begin comms
 }
 
 void loop()
@@ -38,4 +43,5 @@ void loop()
     Serial.println("No timeout.");
     // hykml 3adi
   }
+  vTaskDelay(pdMS_TO_TICKS(100));
 }

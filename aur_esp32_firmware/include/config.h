@@ -1,5 +1,7 @@
 #pragma once
 
+#include <Arduino.h>
+
 // ================================sensor_config=======================================
 #define TRIGGER_PIN 12         // GPIO pin for trigger
 #define ECHO_PIN 13            // GPIO pin for echo
@@ -37,3 +39,14 @@
 // ============================================================================
 #define PIN_SERVO_1 4   // Servo 1 Signal (MG995)
 #define PIN_SERVO_2 16  // Servo 2 Signal (MG995)
+// ================================communication_config=======================================
+
+// Keep real network credentials out of source control.
+inline constexpr char WIFI_SSID[] = "AUR_ROBOT_WIFI";
+inline constexpr char WIFI_PASSWORD[] = "CHANGE_ME";
+inline constexpr uint16_t UDP_COMMAND_PORT = 8888;
+inline constexpr uint16_t UDP_TELEMETRY_PORT = 8889;
+inline constexpr uint32_t WIFI_RECONNECT_INTERVAL_MS = 2000;
+inline constexpr uint32_t COMMAND_TIMEOUT_MS = 500;
+inline constexpr uint32_t TELEMETRY_PERIOD_MS = 100;
+
