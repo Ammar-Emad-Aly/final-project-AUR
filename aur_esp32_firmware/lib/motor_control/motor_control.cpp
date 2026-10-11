@@ -167,4 +167,3 @@ void updateMotors() {
         servo2.write(target_servo2_angle);
         current_servo2_angle = target_servo2_angle;
     }
-}
