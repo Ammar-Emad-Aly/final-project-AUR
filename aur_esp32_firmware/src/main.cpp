@@ -1,9 +1,8 @@
 #include <Arduino.h>
 #include <sensors.h>
-#include "config.h"
-#include "robot_types.h"
-#include <Wire.h>
-#include <MPU6050.h>
+
+// put function declarations here:
+
 #include "ros_comms.h"
 
 void setup()
